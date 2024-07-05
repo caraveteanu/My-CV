@@ -113,7 +113,7 @@ img{
   padding: 10px 40px;
   position: relative;
   background-color: inherit;
-  width: 100%;
+  width: 107%;
   /* animation: movedown 6s linear forwards; */
   opacity: 1;
 }
@@ -342,4 +342,21 @@ width: 98%;
     opacity: 0;
     bottom: 0;
   }
+}
+.shake {
+  transition: transform 0.3s;
+}
+
+.shake:hover {
+  cursor:pointer;
+  animation: subtle-shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes subtle-shake {
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  25% { transform: translate(1px, -1px) rotate(0deg); }
+  50% { transform: translate(-1px, 1px) rotate(0deg); }
+  75% { transform: translate(1px, 1px) rotate(0deg); }
+  100% { transform: translate(-1px, -1px) rotate(0deg); }
 }
